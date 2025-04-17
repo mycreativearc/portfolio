@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta for character encoding and responsive layout -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About Me</title>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- =============================
+       Header & Navigation
+  ============================== -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-box">
+        <a href="index.html" class="logo-link">
+          <h1 class="logo">my creative arc</h1>
+        </a>
+      </div>
+
+      <!-- Hamburger and Close Icons -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="close-icon" id="closeIcon">✕</div>
+
+      <!-- Navigation Links -->
+      <div class="nav-box">
+        <ul class="nav-links">
+          <li><a href="about.html" class="active">about me</a></li>
+          <li><a href="contact.html">contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- =============================
+       About Section
+  ============================== -->
+  <section class="about-section">
+    <!-- Image on the left -->
+    <div class="about-image">
+      <img src="images/profile.png" alt="Portrait of Me" />
+    </div>
+
+    <!-- Text on the right -->
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>Khanh Pham is an explorative individual with a wide range of interests who has dedicated her life to pursuing them. She discovered pottery about two years ago and sought a more in-depth, hands-on experience, leading her to The Clay Corner. Taking a significant risk, she moved across the country from Boston to Seattle to immerse herself in the world of clay. In addition to her passion for pottery, Khanh loves building community, climbing, and being outdoors, making Seattle the perfect place to keep her engaged and inspired.</p>
+
+      <h2>Artist Statement</h2>
+      <p>As a new and emerging artist, Khanh Pham delights in learning and intertwining various pottery techniques. She finds a profound connection to Studio Ghibli's film, "The Boy and the Heron," which resonates deeply with her background as an immigrant from Vietnam and her experiences with family dynamics. Particularly captivated by the character Warawara—unborn souls consumed by Pelicans in the magical world created by the main character Mahito's grand uncle due to the imperfect creation of humans and the lack of food for the Pelicans in that world—Pham loves how this character presents the concept of death in a cute and lighthearted manner.</p>
+
+      <p>Khanh Pham uses a surface decoration technique called inlays to hand-draw these whimsical characters in various forms and expressions. Additionally, she sculpts them to be attached to her functional pottery pieces. This blend of techniques allows her to create unique, Ghibli-inspired creations that invite viewers into her imaginative world.</p>
+
+      <p>Pham is drawn to Warawara for its portrayal of death and cycle of life in a more endearing and lighthearted way. Through her art, she invites others to explore her whimsical creations and share in the joy and creativity that define her artistic journey. Her ceramics are a celebration of innovation, imagination, and the enduring magic of handmade art.</p>
+
+      <p>As she continues to develop her practice, Khanh is committed to pushing the limits of her craft. She is currently exploring slip casting and developing new glaze recipes, broadening the possibilities for her future work. Khanh Pham's work is her dedication to creativity and her desire to bring a touch of magic to everyday life.</p>
+
+    </div>
+  </section>
+
+  <!-- =============================
+       Footer
+  ============================== -->
+  <footer>
+    <div class="social-icons">
+  <a href="https://www.instagram.com/mycreativearc" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="mailto:mycreativearc@gmail.com" aria-label="Email">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
+    <p>© 2025 my creative arc. All rights reserved.</p>
+  </footer>
+
+  <!-- =============================
+       Mobile Navigation Script
+  ============================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const closeIcon = document.getElementById("closeIcon");
+      const navBox = document.querySelector(".nav-box");
+
+      function toggleMenu() {
+        navBox.classList.toggle("active");
+        hamburger.classList.toggle("hide");
+        closeIcon.classList.toggle("show");
+      }
+
+      hamburger.addEventListener("click", toggleMenu);
+      closeIcon.addEventListener("click", toggleMenu);
+    });
+  </script>
+</body>
+</html>

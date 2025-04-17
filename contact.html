@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags for encoding and responsive layout -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Contact</title>
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- =============================
+       Header & Navigation
+  ============================== -->
+  <header>
+    <div class="nav-container">
+      <div class="logo-box">
+        <a href="index.html" class="logo-link">
+          <h1 class="logo">my creative arc</h1>
+        </a>
+      </div>
+
+      <!-- Hamburger and Close Icons -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="close-icon" id="closeIcon">✕</div>
+
+      <!-- Navigation Links -->
+      <div class="nav-box">
+        <ul class="nav-links">
+          <li><a href="about.html">about me</a></li>
+          <li><a href="contact.html"class="active">contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- =============================
+       Contact Form Section
+  ============================== -->
+  <section class="contact-form">
+    <h1>Get In Touch</h1>
+
+    <!-- Formspree action: Replace 'yourFormID' with your actual form ID -->
+    <form action="https://formspree.io/f/xvgkjpqa" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- =============================
+       Footer
+  ============================== -->
+  <footer>
+    <div class="social-icons">
+  <a href="https://www.instagram.com/mycreativearc" target="_blank" aria-label="Instagram">
+    <i class="fab fa-instagram"></i>
+  </a>
+  <a href="mailto:mycreativearc@gmail.com" aria-label="Email">
+    <i class="fas fa-envelope"></i>
+  </a>
+</div>
+    <p>© 2025 my creative arc. All rights reserved.</p>
+  </footer>
+
+  <!-- =============================
+       Mobile Navigation Script
+  ============================== -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hamburger = document.getElementById("hamburger");
+      const closeIcon = document.getElementById("closeIcon");
+      const navBox = document.querySelector(".nav-box");
+
+      function toggleMenu() {
+        navBox.classList.toggle("active");
+        hamburger.classList.toggle("hide");
+        closeIcon.classList.toggle("show");
+      }
+
+      hamburger.addEventListener("click", toggleMenu);
+      closeIcon.addEventListener("click", toggleMenu);
+    });
+  </script>
+</body>
+</html>
